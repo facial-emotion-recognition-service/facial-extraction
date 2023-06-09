@@ -1,5 +1,5 @@
 import os
-from human_emotion.core.predictors import Predictor
+from facial_extraction.core import extraction
 import json
 
 if __name__ == "__main__":
