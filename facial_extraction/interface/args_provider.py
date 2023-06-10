@@ -7,22 +7,19 @@ class ArgsProvider:
         parser = argparse.ArgumentParser()
         # Define command-line arguments and options using argparse
         parser.add_argument(
-            "--face_image_file",
+            "--image_file",
             type=str,
-            help="full file name of a file containing an isolated image of a face",
+            help="full file name of a file containing an image to extract faces from",
         )
         parser.add_argument(
-            "--top_n",
-            default=1,
+            "--save_dir",
+            type=str,
+            help="directory to save images of isolated faces",
+        )
+        parser.add_argument(
+            "--face_dim",
             type=int,
-            help="maximum number of emotions to return per face",
-        )
-        parser.add_argument(
-            "--ret",
-            default="text",
-            type=str,
-            choices=["text", "num"],
-            help="whether to return emotion labels as text ('text') or numbers ('num')",
+            help="square size to save isolated faces",
         )
         args = parser.parse_args()
         return args

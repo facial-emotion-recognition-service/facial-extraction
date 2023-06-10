@@ -1,20 +1,18 @@
 import json
 from pathlib import Path
-from human_emotion.core.predictors import Predictor
+from facial_extraction.core.extractor import Extractor
 
 
 class AppLogic:
-    def __init__(
-        self, model_path, image_input_dir, json_output_dir, config_data
-    ):
-        self.predictor = Predictor(model_path, config_data)
+    def __init__(self, image_input_dir, json_output_dir, config_data):
+        self.extractor = Extractor(config_data)
 
         self.image_input_dir = Path(image_input_dir)
         self.json_output_dir = Path(json_output_dir)
 
-    def get_face_emotions_from_file(self, face_image_name, top_n, ret):
+    def get_face_emotions_from_file(self, face_image_name):
         img_path = Path(self.image_input_dir, face_image_name)
-        result = self.predictor.get_face_image_emotions(img_path, top_n, ret)
+        result = self.extractor.extract_faces(img_path, display=False)
         print(result)
 
         json_str = json.dumps(result, indent=4)
