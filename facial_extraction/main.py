@@ -18,4 +18,4 @@ if __name__ == "__main__":
     imageViewer = ImageViewer()
     face_locations = extractor.extract_faces(img_path)
     print(face_locations)
-    ImageViewer.display_faces(img_path, face_locations)
+    imageViewer.display_faces(img_path, face_locations)
