@@ -4,6 +4,7 @@ sys.path.append('server')
 sys.path.append('core')
 
 from extractor import Extractor
+from image_viewer import ImageViewer
 import json
 
 if __name__ == "__main__":
@@ -14,4 +15,7 @@ if __name__ == "__main__":
 
     img_path = "/home/orbartal/Code/files/multi_faces.jpg"
     extractor = Extractor(config_data)
-    print(extractor.extract_faces(img_path, True))
+    imageViewer = ImageViewer()
+    face_locations = extractor.extract_faces(img_path)
+    print(face_locations)
+    ImageViewer.display_faces(img_path, face_locations)
