@@ -37,8 +37,6 @@ class Extractor:
 
         if display:
             self.display_faces(img_arr, face_locations)
-        if save:
-            self.save_faces(face_locations, size)
 
         return face_locations
 
@@ -50,12 +48,3 @@ class Extractor:
             img_draw.rectangle(rect, fill=None, outline=(0, 0, 225))
         # Display the resulting image
         img.show()
-
-    def save_faces(self, face_locations, size):
-        ## TO DO
-        pass
-
-
-if __name__ == "__main__":
-    extractor = Extractor(config_data=None)
-    print(extractor.extract_faces(img_path, display=True))
