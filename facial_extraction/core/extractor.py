@@ -13,7 +13,7 @@ img_path = os.path.join(DIR, IM_FILE)
 
 
 class Extractor:
-    def __init__(self, config_data):
+    def __init__(self):
         pass
 
     def extract_faces(self, img_path):
