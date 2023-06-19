@@ -1,4 +1,6 @@
 import json
+from numpy_array_encoder import NumpyArrayEncoder
+
 
 class JsonMatrixParser:
     def __init__(self):
