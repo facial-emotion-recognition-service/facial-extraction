@@ -1,7 +1,7 @@
 import os, sys
 
-sys.path.append('../interface')
-sys.path.append('../core')
+sys.path.append('server')
+sys.path.append('core')
 
 
 from app_config_provider import AppConfigProvider
