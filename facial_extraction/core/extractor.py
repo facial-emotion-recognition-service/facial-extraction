@@ -8,7 +8,7 @@ import face_recognition
 IMAGES = [".png", ".jpg"]
 VIDEOS = [".mp4"]
 
-DIR = "facial-extraction/raw_data/"
+DIR = "raw_data/"
 IM_FILE = "image1.jpg"
 img_path = os.path.join(DIR, IM_FILE)
 

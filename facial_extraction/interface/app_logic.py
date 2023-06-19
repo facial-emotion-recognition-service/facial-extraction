@@ -5,12 +5,12 @@ from facial_extraction.core.extractor import Extractor
 
 class AppLogic:
     def __init__(self, image_input_dir, json_output_dir, config_data):
+        print(image_input_dir)
         self.extractor = Extractor(config_data)
-
         self.image_input_dir = Path(image_input_dir)
         self.json_output_dir = Path(json_output_dir)
 
-    def get_face_emotions_from_file(self, face_image_name):
+    def extract_faces_coords_from_file(self, face_image_name):
         img_path = Path(self.image_input_dir, face_image_name)
         result = self.extractor.extract_faces(img_path, display=False)
         print(result)
