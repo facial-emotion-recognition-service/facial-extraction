@@ -26,7 +26,7 @@ def getHello(request):
 
 def getFacesCoordsFromImageFile(request, faces_image_file):
     print("Server.getFacesCoordsFromImageFile.faces_image_file = " + faces_image_file)
-    maxrix_result = app.extract_faces_coords_from_file(faces_image_file, 8, "text")
+    maxrix_result = app.extract_faces_coords_from_file(faces_image_file)
     json_result = parser.mapMatrixIntoJson(maxrix_result)
     return HttpResponse(json_result)
 
