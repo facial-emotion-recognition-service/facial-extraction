@@ -6,7 +6,7 @@ with open("requirements.txt") as f:
 requirements = [x.strip() for x in content if "git+" not in x]
 
 setup(
-    name="human_emotion",
+    name="facial_extraction",
     # version="0.0.1",
     description="Human Emotion Recognition",
     # license="MIT",
