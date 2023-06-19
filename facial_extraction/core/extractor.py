@@ -31,5 +31,3 @@ class Extractor:
         img_arr = face_recognition.load_image_file(img_path)
         face_locations = face_recognition.face_locations(img_arr)
         return face_locations
-
-
