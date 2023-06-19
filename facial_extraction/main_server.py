@@ -1,6 +1,6 @@
 import os, sys
 
-sys.path.append('server')
+sys.path.append('interface')
 sys.path.append('core')
 
 
