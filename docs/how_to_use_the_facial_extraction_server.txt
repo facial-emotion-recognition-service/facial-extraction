@@ -1,0 +1,27 @@
+How to build, run and test the facial-extraction server
+
+1) define the path of image dir
+export IMAGE_INPUT_DIR=/home/orbartal/Code/files
+echo $IMAGE_INPUT_DIR
+
+2) copy/download/create an image in IMAGE_INPUT_DIR
+For example: multi_faces.jpg
+IMAGE_INPUT_DIR/multi_faces.jpg
+
+3) Install requirements
+3.1 cd into facial-extraction
+3.2 RUN pip install -r requirements.txt
+
+4) Run server
+4.1 cd into facial-extraction/facial-extraction/interface
+4.2 Run python3 main_server.py runserver 0.0.0.0:8000
+
+5) Use the server API
+5.1 Test the server with CURL in terminal: curl http://localhost:8000/hello
+5.2 Test the faces api with CURL in terminal: curl http://localhost:8000/faces/multi_faces.jpg
+
+You can also test both API with your browser
+
+You should get back a text result of rectangles defined by their coordinates.
+Each rectangle is the location of a face in the input image.
+
