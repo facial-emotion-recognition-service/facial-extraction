@@ -8,9 +8,7 @@ COPY requirements.txt .
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-RUN mkdir output_json
-COPY human_emotion .
-# COPY config.json .
+COPY facial_extraction .
 
 EXPOSE 8000
 
