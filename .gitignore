@@ -1,7 +1,7 @@
 # Configuration
 .env
 
-#IDE
+# IDE
 .idea/**
 
 # System files
