@@ -10,7 +10,7 @@ IMAGE_INPUT_DIR/multi_faces.jpg
 
 3) Install requirements
 3.1 cd into facial-extraction
-3.2 RUN pip install -r requirements.txt
+3.2 RUN pip install -e .
 
 4) Run server
 4.1 cd into facial-extraction/facial-extraction/interface
