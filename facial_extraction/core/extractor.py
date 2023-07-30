@@ -1,15 +1,6 @@
 """Provides an API for extracting faces from an image file."""
 
-import os
 import face_recognition
-
-## TO DO: Store in config file
-IMAGES = [".png", ".jpg"]
-VIDEOS = [".mp4"]
-
-DIR = "facial-extraction/raw_data/"
-IM_FILE = "image1.jpg"
-img_path = os.path.join(DIR, IM_FILE)
 
 
 class Extractor:

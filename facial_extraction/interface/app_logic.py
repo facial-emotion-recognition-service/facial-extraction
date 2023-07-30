@@ -1,5 +1,5 @@
 from pathlib import Path
-from extractor import Extractor
+from facial_extraction.core.extractor import Extractor
 
 
 class AppLogic:
