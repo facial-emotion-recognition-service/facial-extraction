@@ -1,7 +1,4 @@
-import os, sys
-
-sys.path.append('../interface')
-sys.path.append('../core')
+import sys
 
 from app_config_provider import AppConfigProvider
 from app_logic import AppLogic
@@ -29,9 +26,14 @@ def getFacesCoordsFromImageFile(request, faces_image_file):
     json_result = parser.mapMatrixIntoJson(maxrix_result)
     return HttpResponse(json_result)
 
+
 urlpatterns = [
     path(r"hello", getHello),
-    path(r"faces/<faces_image_file>", getFacesCoordsFromImageFile, name="some-name"),
+    path(
+        r"faces/<faces_image_file>",
+        getFacesCoordsFromImageFile,
+        name="some-name",
+    ),
 ]
 
 if __name__ == "__main__":

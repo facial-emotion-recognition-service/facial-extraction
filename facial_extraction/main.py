@@ -1,11 +1,5 @@
-import os, sys
-
-sys.path.append('server')
-sys.path.append('core')
-
-from extractor import Extractor
-from image_viewer import ImageViewer
-import json
+from facial_extraction.core.extractor import Extractor
+from facial_extraction.core.image_viewer import ImageViewer
 
 if __name__ == "__main__":
     img_path = "/home/orbartal/Code/files/multi_faces.jpg"
